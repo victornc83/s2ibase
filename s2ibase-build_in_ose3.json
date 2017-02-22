@@ -37,7 +37,13 @@
                   "ref": "master"
                }
             },
-            "output": {
+			"strategy": {
+				"type": "Docker",
+				"dockerStrategy": {
+					"dockerfilePath": "./Dockerfile"
+				}
+            },
+			"output": {
                "to": {
                   "kind": "ImageStreamTag",
                   "name": "s2ibase:latest"
